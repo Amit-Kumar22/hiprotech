@@ -185,12 +185,6 @@ function AboutUs() {
       <footer className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600 text-gray-100 py-8 px-4 mt-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-lg font-semibold tracking-wide">© {new Date().getFullYear()} Hyprotech Technologies. All rights reserved.</div>
-          <div className="flex space-x-6 text-sm">
-            <a href="/" className="hover:underline">Home</a>
-            <a href="/pages/about" className="hover:underline">About</a>
-            <a href="/contact" className="hover:underline">Contact</a>
-            <a href="/privacy" className="hover:underline">Privacy Policy</a>
-          </div>
         </div>
       </footer>
     </div>

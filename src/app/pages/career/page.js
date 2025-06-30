@@ -227,9 +227,11 @@ export default function Page() {
               ) : filteredJobs.length > 0 ? (
                 <div className="space-y-4">
                   {filteredJobs.map(job => (
-                    <div className="bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 p-6 rounded-2xl border border-gray-300 shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div
+                      key={job.id}
+                      className="bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 p-6 rounded-2xl border border-gray-300 shadow-md hover:shadow-xl transition-shadow duration-300"
+                    >
                       <JobCard
-                        key={job.id}
                         job={job}
                         onApply={() => handleApply(job)}
                       />

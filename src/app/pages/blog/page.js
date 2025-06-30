@@ -232,21 +232,12 @@ export default function Page() {
         {/* Footer */}
         <footer className="bg-gray-900 text-white py-12">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-30">
               <div className="md:col-span-2">
                 <h3 className="text-xl font-bold mb-4">Robotics Insights</h3>
                 <p className="text-gray-400">
                   Providing cutting-edge analysis and perspectives on robotics technology since 2015.
                 </p>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-4">Quick Links</h4>
-                <ul className="space-y-2">
-                  <li><a href="#" className="text-gray-400 hover:text-white transition">Home</a></li>
-                  <li><a href="#" className="text-gray-400 hover:text-white transition">Blog</a></li>
-                  <li><a href="#" className="text-gray-400 hover:text-white transition">Research</a></li>
-                  <li><a href="#" className="text-gray-400 hover:text-white transition">Case Studies</a></li>
-                </ul>
               </div>
               <div>
                 <h4 className="font-semibold mb-4">Connect</h4>
