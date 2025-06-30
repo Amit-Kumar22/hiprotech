@@ -287,7 +287,7 @@ export default function Page() {
                     Email: <a href="mailto:careers@hyprotech.in" className="text-blue-600 hover:underline">careers@hyprotech.in</a>
                   </p>
                   <p className="text-gray-700">
-                    Phone: <a href="tel:+911234567890" className="text-blue-600 hover:underline">+91 12345 67890</a>
+                    Phone: <a href="tel:+911234567890" className="text-blue-600 hover:underline">+91 8777687605</a>
                   </p>
                 </div>
               </div>

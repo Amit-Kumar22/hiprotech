@@ -96,25 +96,14 @@ export default function TopNavBar() {
   // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      // If click is outside the profile dropdown and not on the profile button, close it
-      if (
-        navbarRef.current &&
-        !navbarRef.current.contains(event.target)
-      ) {
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
         setDropdownOpen(null);
-        setProfileOpen(false);
-      } else if (
-        profileOpen &&
-        profileBtnRef.current &&
-        !profileBtnRef.current.contains(event.target) &&
-        !event.target.closest('.profile-dropdown')
-      ) {
         setProfileOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [profileOpen]);
+  }, []);
 
   // Handle resizing
   useEffect(() => {
@@ -126,7 +115,15 @@ export default function TopNavBar() {
   }, []);
 
   const toggleDropdown = (menu) => {
-    setDropdownOpen(dropdownOpen === menu ? null : menu);
+    if (dropdownOpen === menu) {
+      setDropdownOpen(null);
+    } else {
+      setDropdownOpen(menu);
+      // Auto-close dropdown after 2 seconds
+      setTimeout(() => {
+        setDropdownOpen(null);
+      }, 2000);
+    }
   };
 
   // Set theme on mount
