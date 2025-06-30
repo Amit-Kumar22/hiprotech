@@ -44,7 +44,7 @@ export default function Page() {
   {/* Background Image with Overlay */}
   <div className="absolute inset-0 z-0">
     <Image
-      src="/drone/franchise.jpg" // Replace with your actual image path
+      src="/Military/4.png"
       alt="Robotics and AI background"
       layout="fill"
       objectFit="cover"

@@ -10,7 +10,7 @@ export default function HiproTechPage() {
                     {/* Background Image with overlay */}
                     <div className="absolute inset-0 z-0">
                         <Image
-                            src="/drone/school1.jpg"
+                            src="/drone/school8.jpg"
                             alt="21st Century School"
                             fill
                             className="object-cover"
@@ -68,15 +68,15 @@ export default function HiproTechPage() {
                     {[
                         {
                             text: `Equipping kids with innovation & 21st century skills.`,
-                            image: "/drone/school6.jpeg"
+                            image: "/drone/school5.png"
                         },
                         {
                             text: `Hands-on IoT and AI learning with real-life applications for students.`,
-                            image: "/drone/school7.jpg"
+                            image: "/drone/impact2.jpg"
                         },
                         {
                             text: `Learn in simulated environments and grasp academic concepts practically.`,
-                            image: "/drone/school8.jpg"
+                            image: "/drone/home2.jpg"
                         },
                     ].map((desc, idx) => (
                         <div key={idx} className="bg-white rounded-xl shadow-md p-6">
@@ -99,37 +99,37 @@ export default function HiproTechPage() {
                             title: "STEM & ROBOTICS LAB",
                             text: `HIPROTECH is your gateway to an exciting world of innovation and learning, where students and educators can explore the fascinating concepts of STEM and Robotics. Whether you are looking to establish a STEM lab, a robotics lab, or a combination of both, we have the expertise and resources to make your students dive into the concepts of STEM and Robotics.`,
                             color: "bg-rose-100",
-                            image: "/3.png"
+                            image: "/drone/franchise4.jpg"
                         },
                         {
                             title: "AI AND IOT LAB",
                             text: `Our AI & IoT lab for schools is tailored to cater to the educational needs of students at K-12 levels. Through hands-on activities and projects, students can gain a practical understanding of IoT and explore its potential for creating innovative and real-life projects. If you are looking to establish an AI and IoT lab setup in your school, HIPROTECH is here to support you.`,
                             color: "bg-cyan-100",
-                            image: "/3.png"
+                            image: "/drone/blog2.webp"
                         },
                         {
                             title: "AR/VR LAB",
                             text: `Our AR/VR lab setup is designed to provide students and educators with an engaging platform to explore, create, and learn in simulated environments where our experts are committed to empower students with the skills to navigate the exciting world of AR&VR. Our Virtual Reality labs will allow students to quickly and easily grasp academic concepts that previously required extensive theoretical study.`,
                             color: "bg-green-100",
-                            image: "/3.png"
+                            image: "/drone/blog1.jpg"
                         },
                         {
                             title: "21ST CENTURY SHOWCASE SCHOOL",
                             text: `The 21st Century Showcase School is a cohort of inspiring schools from around the world and to create an ecosystem encouraging young students to be 21st century skill ready. The objective behind setting up the Showcase Schools is to equip the schools with various technologies and tools to nurture innovation & 21st century skills in students which are in line with NEP 2020 & (UNSDGs)`,
                             color: "bg-indigo-100",
-                            image: "/3.png"
+                            image: "/drone/franchise4.jpg"
                         },
                         {
                             title: "PRE-TINKERING LAB",
                             text: `Our unique approach in our Pre-Tinkering Lab, seamlessly blends education with excitement, ensuring that every child's encounter with STEAM is filled with wonder, joy, and valuable insights. With a diverse range of engaging activities and cutting-edge HIPROTECH products, we empower students to learn, experiment, and build their way to becoming confident problem solvers and critical thinkers in their early age.`,
                             color: "bg-pink-100",
-                            image: "/3.png"
+                            image: "/drone/franchise3.jpg"
                         },
                         {
                             title: "ATAL TINKERING LAB",
                             text: `HIPROTECH is a comprehensive solution provider for setting up Atal Tinkering Labs (ATLs) and facilitating end-to-end execution of various lab activities. We offer a range of unique HIPROTECH DIY (Do It Yourself) kits, products, and methodologies to support the learning process in ATLs. HIPROTECH end-to-end execution approach ensures that ATLs receive comprehensive support from setup to implementation.`,
                             color: "bg-yellow-100",
-                            image: "/3.png"
+                            image: "/drone/new.jpg"
                         },
                     ].map((lab, idx) => (
                         <div

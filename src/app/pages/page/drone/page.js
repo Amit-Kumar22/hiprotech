@@ -162,25 +162,25 @@ export default function Drone() {
               {[
                 {
                   title: "Agriculture",
-                  image: "/drone/drone4.jpg",
+                  image: "/Agriculture/2.png",
                   points: ["Enterprise", "Production", "Research"],
                   desc: "Collect high-quality environmental data using UAVs with sensor tech.",
                 },
                 {
                   title: "Environment & Energy",
-                  image: "/drone/drone5.jpg",
+                  image: "/Environment/2.png",
                   points: ["Mining", "Oil & Gas", "Electric"],
                   desc: "Optimize operations, improve safety, and respond after disasters.",
                 },
                 {
                   title: "Military & Government",
-                  image: "/drone/drone7.avif",
+                  image: "/Military/8.png",
                   points: ["Indian Defense", "Government Contractors"],
                   desc: "Partner to improve safety of personnel and infrastructure.",
                 },
                 {
                   title: "Public Safety",
-                  image: "/drone/drone8.avif",
+                  image: "/Safety/3.png",
                   points: ["Police – Fire", "HAZMAT – Emergency", "Response"],
                   desc: "Leaders in using drones for public safety since 2013.",
                 },
@@ -192,19 +192,19 @@ export default function Drone() {
                 },
                 {
                   title: "Insurance",
-                  image: "/drone/drone10.png",
+                  image: "/Insurance/2.png",
                   points: ["Carriers", "Commercial", "Property Owners"],
                   desc: "UAVs used for damage assessment to reduce infrastructure risks.",
                 },
                 {
                   title: "Education",
-                  image: "/drone/drone11.png",
+                  image: "/Education/d5.jpg",
                   points: ["Custom Training", "Corporate Training", "Online Courses"],
                   desc: "Leading drone training and certification programs in India.",
                 },
                 {
                   title: "Humanitarian",
-                  image: "/drone/drone12.png",
+                  image: "/Humanitarian/6.png",
                   points: ["Landmine Detection", "Medical Response", "Situational Assessment"],
                   desc: "Supporting global public safety and humanitarian aid operations.",
                 },
