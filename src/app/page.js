@@ -68,7 +68,7 @@ export default function Home() {
               </div>
               <div className="bg-gray-100 rounded-xl overflow-hidden">
                 <Image
-                  src="/drone/home1.jpg"
+                  src="/Education/d(1).jpg"
                   alt="Robotics Illustration"
                   width={600}
                   height={400}
