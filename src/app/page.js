@@ -19,10 +19,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Hyprotech | Robotics, Drones, and AI Solutions</title>
-        <meta name="description" content="Hyprotech provides cutting-edge robotics, drone, and AI solutions for education, industry, and innovation. Discover our products, services, and career opportunities." />
-        <meta name="keywords" content="Hyprotech, Robotics, Drones, AI, Artificial Intelligence, STEM, Education, Technology, Innovation" />
-        <link rel="canonical" href="https://hyprotech.in/" />
+        <title>Hiprotech | Robotics, Drones, and AI Solutions</title>
+        <meta name="description" content="Hiprotech provides cutting-edge robotics, drone, and AI solutions for education, industry, and innovation. Discover our products, services, and career opportunities." />
+        <meta name="keywords" content="Hiprotech, Robotics, Drones, AI, Artificial Intelligence, STEM, Education, Technology, Innovation" />
+        <link rel="canonical" href="https://hiprotech.in/" />
         {/* Open Graph */}
         <meta property="og:title" content="Hyprotech | Robotics, Drones, and AI Solutions" />
         <meta property="og:description" content="Hyprotech provides cutting-edge robotics, drone, and AI solutions for education, industry, and innovation." />
@@ -68,7 +68,7 @@ export default function Home() {
               </div>
               <div className="bg-gray-100 rounded-xl overflow-hidden">
                 <Image
-                  src="/Education/d(1).jpg"
+                  src="/Education/d1.jpg"
                   alt="Robotics Illustration"
                   width={600}
                   height={400}

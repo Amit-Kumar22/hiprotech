@@ -21,7 +21,7 @@ export default function EducationImpact() {
                         </div>
                         <div className="md:w-1/2">
                             <Image
-                                src="/drone/learning1.png"
+                                src="/drone/coding.jpg"
                                 alt="Students engaged in technology learning"
                                 width={600}
                                 height={400}
@@ -36,7 +36,7 @@ export default function EducationImpact() {
                         <div className="flex flex-col md:flex-row gap-12 items-center">
                             <div className="md:w-1/2">
                                 <Image
-                                    src="/drone/impact2.jpg"
+                                    src="/drone/school7.jpg"
                                     alt="Government education partnership"
                                     width={550}
                                     height={400}
@@ -115,7 +115,7 @@ export default function EducationImpact() {
 
                             <div>
                                 <Image
-                                    src="/drone/impact3.jpg"
+                                    src="/Military/5.png"
                                     alt="Students working in innovation lab"
                                     width={600}
                                     height={400}
