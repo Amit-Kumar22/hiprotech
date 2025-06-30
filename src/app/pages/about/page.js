@@ -35,9 +35,9 @@ function AboutUs() {
         <meta name="twitter:description" content="Learn about Hyprotech's mission, vision, and expertise in robotics, drones, and AI education for K-12 schools in India." />
         <meta name="twitter:image" content="/RobotLogin.jpg" />
       </Head>
-      <div className="main-container min-h-screen">
+      <div className="main-container min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-20 px-4">
+        <section className="bg-gradient-to-r from-gray-700 via-gray-500 to-gray-300 text-white py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Changing the landscape for 21st Century School Education through Methodology!
@@ -48,16 +48,16 @@ function AboutUs() {
           </div>
         </section>
         {/* About Section */}
-        <section className="py-16 px-4">
+        <section className="py-16 px-4 bg-gray-100 border border-gray-200 rounded-2xl shadow-lg">
           <div className="max-w-7xl mx-auto">
             {/* About Us Section */}
             <div className="mb-16">
               <div className="text-center mb-12">
-                <span className="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-semibold mb-4">
+                <span className="inline-block px-4 py-2 bg-gradient-to-r from-gray-300 via-gray-100 to-white text-gray-800 rounded-full text-sm font-semibold mb-4 shadow">
                   WHO WE ARE
                 </span>
                 <h2 className="text-4xl font-bold mb-6">Empowering the Future of Education</h2>
-                <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
+                <div className="w-24 h-1 bg-gradient-to-r from-gray-900 via-gray-700 to-gray-400 mx-auto rounded-full shadow"></div>
               </div>
               <div className="grid md:grid-cols-2 gap-12">
                 <div>
@@ -69,7 +69,7 @@ function AboutUs() {
                       equipping both students and educators with essential 21st-century skills.
                     </p>
                   </div>
-                  <div className="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-600 text-gray-800">
+                  <div className="bg-gradient-to-r from-gray-200 via-gray-100 to-gray-50 p-6 rounded-xl border-l-4 border-gray-500 text-gray-800 shadow">
                     <h3 className="text-xl font-semibold mb-3">Our Approach</h3>
                     <p>
                       Through our innovative STEM programs, we cultivate creative problem-solving and
@@ -78,7 +78,7 @@ function AboutUs() {
                   </div>
                 </div>
                 <div>
-                  <div className="bg-gradient-to-r from-blue-700 to-indigo-800 rounded-2xl p-10 text-white mb-16 shadow-xl">
+                  <div className="bg-gradient-to-r from-gray-400 via-gray-200 to-gray-50 rounded-2xl p-10 text-gray-900 mb-16 shadow-xl border border-gray-300">
                     <h3 className="text-2xl font-bold mb-4">Why Choose Us?</h3>
                     <ul className="list-disc pl-6 space-y-2 text-lg">
                       <li>NEP 2020-aligned curriculum</li>
@@ -100,16 +100,16 @@ function AboutUs() {
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="bg-white rounded-2xl p-8 shadow text-center">
-                  <h4 className="text-2xl font-bold text-blue-600 mb-2">100+</h4>
+                <div className="bg-gradient-to-r from-gray-400 via-gray-200 to-gray-50 rounded-2xl p-8 shadow text-center border border-gray-300">
+                  <h4 className="text-2xl font-bold text-gray-800 mb-2">100+</h4>
                   <p className="text-gray-700">Schools Empowered</p>
                 </div>
-                <div className="bg-white rounded-2xl p-8 shadow text-center">
-                  <h4 className="text-2xl font-bold text-blue-600 mb-2">10,000+</h4>
+                <div className="bg-gradient-to-r from-gray-400 via-gray-200 to-gray-50 rounded-2xl p-8 shadow text-center border border-gray-300">
+                  <h4 className="text-2xl font-bold text-gray-800 mb-2">10,000+</h4>
                   <p className="text-gray-700">Students Trained</p>
                 </div>
-                <div className="bg-white rounded-2xl p-8 shadow text-center">
-                  <h4 className="text-2xl font-bold text-blue-600 mb-2">500+</h4>
+                <div className="bg-gradient-to-r from-gray-400 via-gray-200 to-gray-50 rounded-2xl p-8 shadow text-center border border-gray-300">
+                  <h4 className="text-2xl font-bold text-gray-800 mb-2">500+</h4>
                   <p className="text-gray-700">Educators Upskilled</p>
                 </div>
               </div>
@@ -117,7 +117,7 @@ function AboutUs() {
             {/* Strategic Collaborations Section */}
             <div className="mb-16">
               <div className="text-center mb-12">
-                <span className="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-semibold mb-4">
+                <span className="inline-block px-4 py-2 bg-gradient-to-r from-gray-300 via-gray-100 to-white text-gray-800 rounded-full text-sm font-semibold mb-4 shadow">
                   STRATEGIC COLLABORATIONS
                 </span>
                 <h3 className="text-3xl font-bold mb-4">Our Partners</h3>
@@ -126,16 +126,16 @@ function AboutUs() {
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="bg-white rounded-2xl p-8 shadow text-center">
-                  <h4 className="text-xl font-bold text-blue-600 mb-2">Govt. of India</h4>
+                <div className="bg-gradient-to-r from-gray-400 via-gray-200 to-gray-50 rounded-2xl p-8 shadow text-center border border-gray-300">
+                  <h4 className="text-xl font-bold text-gray-800 mb-2">Govt. of India</h4>
                   <p className="text-gray-700">STEM Initiatives</p>
                 </div>
-                <div className="bg-white rounded-2xl p-8 shadow text-center">
-                  <h4 className="text-xl font-bold text-blue-600 mb-2">Top Schools</h4>
+                <div className="bg-gradient-to-r from-gray-400 via-gray-200 to-gray-50 rounded-2xl p-8 shadow text-center border border-gray-300">
+                  <h4 className="text-xl font-bold text-gray-800 mb-2">Top Schools</h4>
                   <p className="text-gray-700">K-12 Collaborations</p>
                 </div>
-                <div className="bg-white rounded-2xl p-8 shadow text-center">
-                  <h4 className="text-xl font-bold text-blue-600 mb-2">Industry Leaders</h4>
+                <div className="bg-gradient-to-r from-gray-400 via-gray-200 to-gray-50 rounded-2xl p-8 shadow text-center border border-gray-300">
+                  <h4 className="text-xl font-bold text-gray-800 mb-2">Industry Leaders</h4>
                   <p className="text-gray-700">EdTech Partnerships</p>
                 </div>
               </div>
@@ -143,7 +143,7 @@ function AboutUs() {
             {/* Media Section */}
             <div className="bg-gray-50 rounded-2xl p-10">
               <div className="text-center mb-12">
-                <span className="inline-block px-4 py-2 bg-white text-blue-600 rounded-full text-sm font-semibold mb-4 shadow-sm">
+                <span className="inline-block px-4 py-2 bg-gradient-to-r from-gray-300 via-gray-100 to-white text-gray-800 rounded-full text-sm font-semibold mb-4 shadow">
                   MEDIA & RECOGNITION
                 </span>
                 <h3 className="text-3xl font-bold mb-4">Featured In</h3>
@@ -152,16 +152,16 @@ function AboutUs() {
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="bg-white rounded-2xl p-8 shadow text-center">
-                  <h4 className="text-xl font-bold text-blue-600 mb-2">Times of India</h4>
+                <div className="bg-gradient-to-r from-gray-400 via-gray-200 to-gray-50 rounded-2xl p-8 shadow text-center border border-gray-300">
+                  <h4 className="text-xl font-bold text-gray-800 mb-2">Times of India</h4>
                   <p className="text-gray-700">Education Innovation</p>
                 </div>
-                <div className="bg-white rounded-2xl p-8 shadow text-center">
-                  <h4 className="text-xl font-bold text-blue-600 mb-2">NDTV</h4>
+                <div className="bg-gradient-to-r from-gray-400 via-gray-200 to-gray-50 rounded-2xl p-8 shadow text-center border border-gray-300">
+                  <h4 className="text-xl font-bold text-gray-800 mb-2">NDTV</h4>
                   <p className="text-gray-700">STEM Leadership</p>
                 </div>
-                <div className="bg-white rounded-2xl p-8 shadow text-center">
-                  <h4 className="text-xl font-bold text-blue-600 mb-2">Hindustan Times</h4>
+                <div className="bg-gradient-to-r from-gray-400 via-gray-200 to-gray-50 rounded-2xl p-8 shadow text-center border border-gray-300">
+                  <h4 className="text-xl font-bold text-gray-800 mb-2">Hindustan Times</h4>
                   <p className="text-gray-700">AI in Schools</p>
                 </div>
               </div>
@@ -169,18 +169,30 @@ function AboutUs() {
           </div>
         </section>
         {/* Call to Action Section */}
-        <section className="bg-blue-600 text-white py-12 px-4">
+        <section className="bg-gradient-to-r from-gray-700 via-gray-500 to-gray-300 text-white py-12 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">Join the Future of Education</h3>
             <p className="text-lg mb-8 max-w-2xl mx-auto">
               Partner with Hyprotech to bring world-class robotics and AI education to your school or organization.
             </p>
-            <a href="/contact" className="inline-block bg-white text-blue-700 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition">
+            <a href="/contact" className="inline-block bg-gradient-to-r from-black via-gray-800 to-gray-600 text-white px-8 py-3 rounded-md font-semibold shadow hover:from-gray-900 hover:to-gray-700 transition">
               Contact Us
             </a>
           </div>
         </section>
       </div>
+      {/* Footer Section */}
+      <footer className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600 text-gray-100 py-8 px-4 mt-12">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="text-lg font-semibold tracking-wide">© {new Date().getFullYear()} Hyprotech Technologies. All rights reserved.</div>
+          <div className="flex space-x-6 text-sm">
+            <a href="/" className="hover:underline">Home</a>
+            <a href="/pages/about" className="hover:underline">About</a>
+            <a href="/contact" className="hover:underline">Contact</a>
+            <a href="/privacy" className="hover:underline">Privacy Policy</a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

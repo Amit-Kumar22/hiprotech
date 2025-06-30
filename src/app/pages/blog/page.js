@@ -6,28 +6,28 @@ import Image from 'next/image';
 const roboticsImages = [
   {
     id: 1,
-    src: '/drone/pic-1.jpg',
+    src: '/Education/d6.jpg',
     alt: 'Industrial robotic arm in factory',
     title: 'Industrial Automation',
     description: 'Revolutionizing manufacturing with precision robotics'
   },
   {
     id: 2,
-    src: '/drone/pic-2.jpg',
+    src: '/Environment/3.png',
     alt: 'Humanoid robot interacting with humans',
     title: 'Human-Robot Interaction',
     description: 'The future of collaborative robotics in daily life'
   },
   {
     id: 3,
-    src: '/drone/pic-3.jpg',
+    src: '/Health/3.png',
     alt: 'Medical robot performing surgery',
     title: 'Medical Robotics',
     description: 'Enhancing precision in surgical procedures'
   },
   {
     id: 4,
-    src: '/drone/pic-4.jpg',
+    src: '/Agriculture/3.png',
     alt: 'Autonomous mobile robot in warehouse',
     title: 'Logistics Automation',
     description: 'Optimizing supply chains with mobile robotics'
@@ -39,7 +39,7 @@ const blogPosts = [
     id: 1,
     title: 'The Future of Collaborative Robotics',
     excerpt: 'Exploring how cobots are transforming small and medium enterprises with safe human-robot interaction.',
-    image: '/drone/blog1.jpg',
+    image: '/drone/collab.jpg',
     date: 'May 15, 2023',
     readTime: '5 min read',
     link: 'https://www.automate.org/robotics/cobots/future-of-collaborative-robots'
