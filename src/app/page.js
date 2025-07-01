@@ -136,6 +136,7 @@ export default function Home() {
                   {/* PLACEHOLDER FOR CODING IMAGE */}
                   <div className="w-full h-48 bg-gray-300 flex items-center justify-center">
                     <span className="text-gray-500">Coding Image</span>
+                    
                   </div>
                   <div className="p-4">
                     <h3 className="font-bold text-lg">Coding Platform</h3>
