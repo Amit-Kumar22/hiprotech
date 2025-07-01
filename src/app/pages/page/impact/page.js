@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { getImagePath } from "@/app/utils/getImagePath";
 
 export default function EducationImpact() {
     return (
@@ -15,13 +16,13 @@ export default function EducationImpact() {
                             <p className="text-lg text-gray-600">
                                 HIPROTECH delivers comprehensive STEM education programs, equipping students with critical skills in coding, AI, and robotics through innovative classroom integration.
                             </p>
-                            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors">
+                            <button className="bg-gradient-to-r from-gray-500 via-gray-600 to-gray-700 hover:from-gray-600 hover:via-gray-700 hover:to-gray-800 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all duration-200 border border-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50">
                                 Explore Our Programs
                             </button>
                         </div>
                         <div className="md:w-1/2">
                             <Image
-                                src="/Military/1.png"
+                                src={getImagePath("/Military/1.png")}
                                 alt="Students engaged in technology learning"
                                 width={600}
                                 height={400}
@@ -64,7 +65,7 @@ export default function EducationImpact() {
                         <div className="flex flex-col md:flex-row gap-12 items-center">
                             <div className="md:w-1/2">
                                 <Image
-                                    src="/Military/6.png"
+                                    src={getImagePath("/Military/6.png")}
                                     alt="Government education partnership"
                                     width={550}
                                     height={400}
@@ -154,7 +155,7 @@ export default function EducationImpact() {
                 </section>
 
                 {/* Impact Metrics */}
-                <section className="py-16 px-6 md:px-16 lg:px-24 bg-blue-600 text-white">
+                <section className="py-16 px-6 md:px-16 lg:px-24 bg-gradient-to-br from-gray-100 via-gray-300 to-gray-400 text-gray-900">
                     <div className="max-w-6xl mx-auto">
                         <div className="grid md:grid-cols-3 gap-8 text-center">
                             {[
@@ -162,9 +163,9 @@ export default function EducationImpact() {
                                 { number: '10,000+', label: 'Students Trained' },
                                 { number: '500+', label: 'Educators Certified' }
                             ].map((metric, index) => (
-                                <div key={index} className="p-6">
-                                    <p className="text-4xl font-bold mb-2">{metric.number}</p>
-                                    <p className="text-blue-100">{metric.label}</p>
+                                <div key={index} className="p-8 bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 rounded-2xl shadow-lg border border-gray-300 flex flex-col items-center hover:shadow-2xl transition-shadow duration-300">
+                                    <p className="text-4xl font-bold mb-2 text-gray-800">{metric.number}</p>
+                                    <p className="text-gray-700 font-medium">{metric.label}</p>
                                 </div>
                             ))}
                         </div>

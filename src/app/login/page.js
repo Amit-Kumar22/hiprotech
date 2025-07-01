@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { login, clearError, forgotPassword, resetPassword } from "../redux/slices/authSlice";
 import Link from "next/link";
 import Image from "next/image";
+import { getImagePath } from "@/app/utils/getImagePath";
 
 
 export default function Page() {
@@ -46,7 +47,7 @@ export default function Page() {
             {/* Left side - Image */}
             <div className="lg:w-1/2 bg-gradient-to-br from-blue-600 to-blue-800 p-0 hidden lg:flex flex-col justify-center items-center relative min-h-[32rem]">
               <Image
-                src="/RobotLogin.jpg"
+                src={getImagePath("/RobotLogin.jpg")}
                 alt="Robotics Illustration"
                 fill
                 className="object-cover absolute inset-0 w-full h-full z-0"

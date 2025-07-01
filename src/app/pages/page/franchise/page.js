@@ -1,9 +1,9 @@
-
 // Protected page logic is disabled: All users can access this page without login.
 // To enable protection, wrap the export with an auth HOC or add logic as needed.
 "use client";
 import React, { useEffect, useState, useMemo } from 'react';
 import Image from 'next/image';
+import { getImagePath } from '@/app/utils/getImagePath';
 
 export default function Page() {
   const [text, setText] = useState('');
@@ -44,7 +44,7 @@ export default function Page() {
   {/* Background Image with Overlay */}
   <div className="absolute inset-0 z-0">
     <Image
-      src="/Military/4.png"
+      src={getImagePath("/Military/4.png")}
       alt="Robotics and AI background"
       layout="fill"
       objectFit="cover"
@@ -65,21 +65,21 @@ export default function Page() {
     </button>
     
     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
-      <div className="bg-blue-500 bg-opacity-10 p-4 rounded-lg backdrop-blur-sm">
-        <p className="text-3xl font-bold">340+</p>
-        <p>Online Courses</p>
+      <div className="bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 p-4 rounded-xl shadow-lg flex flex-col items-center hover:shadow-2xl transition-shadow duration-300">
+        <p className="text-3xl font-bold text-gray-800">340+</p>
+        <p className="text-gray-700">Online Courses</p>
       </div>
-      <div className="bg-blue-500 bg-opacity-10 p-4 rounded-lg backdrop-blur-sm">
-        <p className="text-3xl font-bold">200+</p>
-        <p>Instructors</p>
+      <div className="bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 p-4 rounded-xl shadow-lg flex flex-col items-center hover:shadow-2xl transition-shadow duration-300">
+        <p className="text-3xl font-bold text-gray-800">200+</p>
+        <p className="text-gray-700">Instructors</p>
       </div>
-      <div className="bg-blue-500 bg-opacity-10 p-4 rounded-lg backdrop-blur-sm">
-        <p className="text-3xl font-bold">100%</p>
-        <p>Certification</p>
+      <div className="bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 p-4 rounded-xl shadow-lg flex flex-col items-center hover:shadow-2xl transition-shadow duration-300">
+        <p className="text-3xl font-bold text-gray-800">100%</p>
+        <p className="text-gray-700">Certification</p>
       </div>
-      <div className="bg-blue-500 bg-opacity-10 p-4 rounded-lg backdrop-blur-sm">
-        <p className="text-3xl font-bold">9k+</p>
-        <p>Membership</p>
+      <div className="bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 p-4 rounded-xl shadow-lg flex flex-col items-center hover:shadow-2xl transition-shadow duration-300">
+        <p className="text-3xl font-bold text-gray-800">9k+</p>
+        <p className="text-gray-700">Membership</p>
       </div>
     </div>
   </div>

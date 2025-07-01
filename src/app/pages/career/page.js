@@ -2,6 +2,7 @@
 import Head from 'next/head';
 import { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
+import { getImagePath } from '@/app/utils/getImagePath';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchAllJobs } from '@/app/redux/slices/careerSlice';
 import JobCard from '@/app/components/JobCard';
@@ -59,7 +60,7 @@ export default function Page() {
           {/* Background Image */}
           <div className="absolute inset-0 w-full h-full z-0">
             <Image
-              src="/Military/4.png"
+              src={getImagePath("/Military/4.png")}
               alt="Robotics Illustration"
               fill
               className="object-cover absolute inset-0 w-full h-full z-0"
@@ -289,7 +290,7 @@ export default function Page() {
                     Email: <a href="mailto:careers@hyprotech.in" className="text-blue-600 hover:underline">careers@hyprotech.in</a>
                   </p>
                   <p className="text-gray-700">
-                    Phone: <a href="tel:+911234567890" className="text-blue-600 hover:underline">+91 12345 67890</a>
+                    Phone: <a href="tel:+911234567890" className="text-blue-600 hover:underline">+91 8777687605</a>
                   </p>
                 </div>
               </div>

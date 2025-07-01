@@ -144,7 +144,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-1">Our Office</h3>
                       <p className="text-gray-600">
-                        9th floor, Biscomaun Bhawan, Gandhi Nagar,<br />
+                        9th floor, Biscomaun Bhawan, Gandhi Maidan,<br />
                         Patna, Bihar 800001, India
                       </p>
                     </div>
