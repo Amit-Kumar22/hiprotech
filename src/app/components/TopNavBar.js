@@ -2,6 +2,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
+import { getImagePath } from '@/app/utils/getImagePath';
 import { Moon, Sun, User, LogOut } from 'lucide-react';
 import { useDispatch } from 'react-redux';
 import { logout } from '@/app/redux/slices/authSlice';
@@ -20,7 +22,6 @@ const navItemsBase = [
     name: 'Contact Us',
     href: '/pages/contact',
   },
-  // 'My Account' will be conditionally added
   {
     name: 'Our Blogs',
     href: '/pages/blog',
@@ -31,7 +32,6 @@ const navItemsBase = [
   },
   {
     name: 'Pages',
-    href: '#',
     dropdown: [
       { name: 'Drones', href: '/pages/page/drone' },
       { name: 'Impact', href: '/pages/page/impact' },
@@ -42,50 +42,11 @@ const navItemsBase = [
       { name: 'Event', href: '/pages/page/event' },
     ],
   },
-
-  // {
-  //   name: 'Login',
-  //   href: '/login',
-  // },
 ];
 
 export default function TopNavBar() {
   const router = useRouter();
   const dispatch = useDispatch();
-  // const { user, token } = useSelector((state) => state.auth);
-
-  // Define navItems based on authentication state (using localStorage for reliability)
-  let navItems = [...navItemsBase];
-  const isLoggedIn = typeof window !== "undefined" && localStorage.getItem("token");
-  if (isLoggedIn) {
-    navItems = navItems.filter(item => item.name !== 'Login');
-   
-  }
-  // Logout handler
-  const handleLogout = () => {
-    dispatch(logout());
-    removeAuthCookie();
-    if (typeof window !== 'undefined') {
-      localStorage.removeItem('token');
-      localStorage.removeItem('user');
-      if (window.toast) {
-        window.toast('Logged out successfully!', 'success');
-      }
-      router.push('/'); // Redirect to home page after logout
-    }
-  };
-  // Helper to check if user is authenticated (token in localStorage)
-  const isAuthenticated = () => {
-    if (typeof window === 'undefined') return false;
-    return !!localStorage.getItem('token');
-  };
-
-  // Handler for menu clicks
-  // Navigation is now public: no login required for any page
-  const handleMenuClick = (e, href) => {
-    // No authentication check
-    return;
-  };
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(null);
   const [theme, setTheme] = useState('light');
@@ -108,7 +69,10 @@ export default function TopNavBar() {
   // Handle resizing
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 1024) setIsOpen(false);
+      if (window.innerWidth >= 1024) {
+        setIsOpen(false);
+        setDropdownOpen(null);
+      }
     };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -157,7 +121,27 @@ export default function TopNavBar() {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
- 
+  const handleNavigation = (href) => {
+    // Close dropdown and mobile menu on navigation
+    setDropdownOpen(null);
+    setIsOpen(false);
+    router.push(href);
+  };
+
+  const handleMobileDropdownToggle = (menu) => {
+    if (window.innerWidth < 1024) {
+      // For mobile, just toggle the dropdown without closing the navbar
+      toggleDropdown(menu);
+    } else {
+      // For desktop, use the normal behavior
+      toggleDropdown(menu);
+    }
+  };
+
+  const handleMobileLinkClick = (href) => {
+    handleNavigation(href);
+    setIsOpen(false); // Close mobile menu after click
+  };
 
   return (
     <nav
@@ -167,16 +151,13 @@ export default function TopNavBar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 text-black dark:text-white">
-            <svg className="h-8 w-8 text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0z" />
-            </svg>
-            <span className="text-xl font-bold">Hiprotech</span>
+          <Link href="/" className="flex items-center text-black dark:text-white">
+            <Image src={getImagePath("/logo.png")} alt="Hiprotech Logo" width={150} height={40} className="h-10 w-auto object-contain" priority />
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navItems.map((item) => (
+            {navItemsBase.map((item) => (
               <div key={item.name} className="relative">
                 {item.dropdown ? (
                   <>
@@ -201,7 +182,7 @@ export default function TopNavBar() {
                             <Link
                               key={subItem.name}
                               href={subItem.href}
-                              onClick={(e) => handleMenuClick(e, subItem.href)}
+                              onClick={() => handleNavigation(subItem.href)}
                               className="block px-4 py-2 text-sm text-black dark:text-gray-200 hover:bg-indigo-50 dark:hover:bg-gray-700 hover:text-indigo-600 dark:hover:text-white"
                             >
                               {subItem.name}
@@ -214,7 +195,7 @@ export default function TopNavBar() {
                 ) : (
                   <Link
                     href={item.href}
-                    onClick={(e) => handleMenuClick(e, item.href)}
+                    onClick={() => handleNavigation(item.href)}
                     className="text-black dark:text-gray-200 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 text-sm font-medium"
                   >
                     {item.name}
@@ -234,44 +215,8 @@ export default function TopNavBar() {
               {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
             </button>
 
-          {/* Profile (always show) */}
-          {/* <div className="relative">
-            <button
-              ref={profileBtnRef}
-              onClick={() => setProfileOpen(!profileOpen)}
-              className="p-2 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-200 hover:ring-2 hover:ring-indigo-500"
-            >
-              <User size={18} />
-            </button>
-
-            {profileOpen && (
-              <div className="absolute right-0 mt-2 w-44 bg-white dark:bg-gray-800 shadow-lg rounded-md z-30 profile-dropdown">
-                <Link
-                  href="/profile"
-                  className="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-indigo-50 dark:hover:bg-gray-700"
-                  onClick={() => setProfileOpen(false)}
-                >
-                  <User className="mr-2" size={16} /> Profile
-                </Link>
-                <button
-                  className="w-full text-left flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-indigo-50 dark:hover:bg-gray-700"
-                  onClick={() => { setProfileOpen(false); handleLogout(); }}
-                >
-                  <LogOut className="mr-2" size={16} /> Logout
-                </button>
-              </div>
-            )}
-          </div> */}
-
-            {/* Mobile Menu Toggle & Theme Toggle */}
+            {/* Mobile Menu Toggle */}
             <div className="lg:hidden flex items-center space-x-2">
-              {/* <button
-                onClick={toggleTheme}
-                className="p-2 rounded-full text-black dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
-                aria-label="Toggle theme"
-              >
-                {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
-              </button> */}
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
@@ -295,19 +240,13 @@ export default function TopNavBar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="lg:hidden px-4 pb-4">
-          {navItems.map((item) => (
+          {navItemsBase.map((item) => (
             <div key={item.name} className="py-1">
               {item.dropdown ? (
                 <>
                   <button
-                    onClick={(e) => {
-                      if (!isAuthenticated()) {
-                        e.preventDefault();
-                        router.push('/login');
-                      } else {
-                        toggleDropdown(item.name);
-                      }
-                    }}
+                    type="button"
+                    onClick={() => handleMobileDropdownToggle(item.name)}
                     className="w-full text-left flex justify-between items-center px-4 py-2 text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                   >
                     {item.name}
@@ -325,7 +264,7 @@ export default function TopNavBar() {
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          onClick={(e) => handleMenuClick(e, subItem.href)}
+                          onClick={() => handleMobileLinkClick(subItem.href)}
                           className="block px-4 py-2 text-sm text-black dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
                         >
                           {subItem.name}
@@ -337,7 +276,7 @@ export default function TopNavBar() {
               ) : (
                 <Link
                   href={item.href}
-                  onClick={(e) => handleMenuClick(e, item.href)}
+                  onClick={() => handleMobileLinkClick(item.href)}
                   className="block px-4 py-2 text-black dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   {item.name}

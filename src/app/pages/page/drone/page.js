@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { getImagePath } from "@/app/utils/getImagePath";
 // import withAuth from '@/app/components/withAuth'; // Disabled: page is now public
 
 export default function Drone() {
@@ -10,7 +11,7 @@ export default function Drone() {
         <section className="hero-section">
           <div className="video-wrapper h-[600px] md:h-[400px] lg:h-[600px] w-full overflow-hidden flex items-center justify-center">
             <video
-              src="/hiprotech-website-video.mp4"
+              src={getImagePath("/hiprotech-website-video.mp4")}
               autoPlay
               loop
               muted
@@ -62,7 +63,7 @@ export default function Drone() {
               </div>
               <div className="rounded-xl overflow-hidden shadow-lg">
                 <Image
-                  src="/drone/drone2.jpg"
+                  src={getImagePath("/drone/drone2.jpg")}
                   alt="Engineering"
                   width={600}
                   height={400}
@@ -74,7 +75,7 @@ export default function Drone() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="rounded-xl overflow-hidden shadow-lg">
                 <Image
-                  src="/drone/drone3.jpg"
+                  src={getImagePath("/drone/drone3.jpg")}
                   alt="Commitment"
                   width={600}
                   height={400}

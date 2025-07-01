@@ -2,6 +2,7 @@
 import Head from 'next/head';
 import { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
+import { getImagePath } from '@/app/utils/getImagePath';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchAllJobs } from '@/app/redux/slices/careerSlice';
 import JobCard from '@/app/components/JobCard';
@@ -59,7 +60,7 @@ export default function Page() {
           {/* Background Image */}
           <div className="absolute inset-0 w-full h-full z-0">
             <Image
-              src="/Military/4.png"
+              src={getImagePath("/Military/4.png")}
               alt="Robotics Illustration"
               fill
               className="object-cover absolute inset-0 w-full h-full z-0"
@@ -227,9 +228,11 @@ export default function Page() {
               ) : filteredJobs.length > 0 ? (
                 <div className="space-y-4">
                   {filteredJobs.map(job => (
-                    <div className="bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 p-6 rounded-2xl border border-gray-300 shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <div
+                      key={job.id}
+                      className="bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 p-6 rounded-2xl border border-gray-300 shadow-md hover:shadow-xl transition-shadow duration-300"
+                    >
                       <JobCard
-                        key={job.id}
                         job={job}
                         onApply={() => handleApply(job)}
                       />

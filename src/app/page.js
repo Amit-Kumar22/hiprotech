@@ -3,6 +3,7 @@
 import Head from 'next/head';
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { getImagePath } from "@/app/utils/getImagePath";
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
@@ -41,7 +42,7 @@ export default function Home() {
         <section className="hero-section">
           <div className="video-wrapper h-[600px] md:h-[400px] lg:h-[600px] w-full overflow-hidden flex items-center justify-center">
             <video
-              src="/hiprotech-website-video.mp4"
+              src={getImagePath("/hiprotech-website-video.mp4")}
               autoPlay
               loop
               muted
@@ -68,12 +69,12 @@ export default function Home() {
               </div>
               <div className="bg-gray-100 rounded-xl overflow-hidden">
                 <Image
-                  src="/Education/d1.jpg"
+                  src={getImagePath("/Education/d1.jpg")}
                   alt="Robotics Illustration"
                   width={600}
                   height={400}
                   className="w-full h-64 lg:h-96 object-cover object-center"
-                  loading="lazy"
+                  priority={true}
                 />
               </div>
             </div>
@@ -95,7 +96,7 @@ export default function Home() {
                   icon="🚀"
                   title="Innovation & 21st Century Skills"
                   description="Empowering kids to become Creative Thinkers & Problem Solvers"
-                  imagePlaceholder="/drone/home2.jpg"
+                  imagePlaceholder={getImagePath("/drone/home2.jpg")}
                 />
                 <ServiceCard
                   icon="🏫"
@@ -138,36 +139,56 @@ export default function Home() {
                     <span className="text-gray-500">Coding Image</span>
                     
                   </div>
+                  <Image
+                    src={getImagePath("/Education/d1.jpg")}
+                    alt="Coding Platform"
+                    width={400}
+                    height={192}
+                    className="w-full h-48 object-cover object-center"
+                    loading="lazy"
+                  />
                   <div className="p-4">
                     <h3 className="font-bold text-lg">Coding Platform</h3>
                     <p className="text-gray-600">Interactive learning with PictoBlox</p>
                   </div>
                 </div>
                 <div className="bg-gray-100 rounded-lg overflow-hidden">
-                  {/* PLACEHOLDER FOR ROBOTICS IMAGE */}
-                  <div className="w-full h-48 bg-gray-300 flex items-center justify-center">
-                    <span className="text-gray-500">Robotics Image</span>
-                  </div>
+                  <Image
+                    src={getImagePath("/Education/d2.jpg")}
+                    alt="Robotics Kits"
+                    width={400}
+                    height={192}
+                    className="w-full h-48 object-cover object-center"
+                    loading="lazy"
+                  />
                   <div className="p-4">
                     <h3 className="font-bold text-lg">Robotics Kits</h3>
                     <p className="text-gray-600">Hands-on robotics education</p>
                   </div>
                 </div>
                 <div className="bg-gray-100 rounded-lg overflow-hidden">
-                  {/* PLACEHOLDER FOR AI IMAGE */}
-                  <div className="w-full h-48 bg-gray-300 flex items-center justify-center">
-                    <span className="text-gray-500">AI Image</span>
-                  </div>
+                  <Image
+                    src={getImagePath("/Education/d3.jpg")}
+                    alt="AI Labs"
+                    width={400}
+                    height={192}
+                    className="w-full h-48 object-cover object-center"
+                    loading="lazy"
+                  />
                   <div className="p-4">
                     <h3 className="font-bold text-lg">AI Labs</h3>
                     <p className="text-gray-600">Artificial Intelligence curriculum</p>
                   </div>
                 </div>
                 <div className="bg-gray-100 rounded-lg overflow-hidden">
-                  {/* PLACEHOLDER FOR VR IMAGE */}
-                  <div className="w-full h-48 bg-gray-300 flex items-center justify-center">
-                    <span className="text-gray-500">VR Image</span>
-                  </div>
+                  <Image
+                    src={getImagePath("/Education/d4.jpg")}
+                    alt="VR Learning"
+                    width={400}
+                    height={192}
+                    className="w-full h-48 object-cover object-center"
+                    loading="lazy"
+                  />
                   <div className="p-4">
                     <h3 className="font-bold text-lg">VR Learning</h3>
                     <p className="text-gray-600">Immersive educational experiences</p>
@@ -190,11 +211,15 @@ export default function Home() {
                     title="PRE-TINKERING LAB"
                     description="Our unique approach in our Pre-Tinkering Lab seamlessly blends education with excitement, ensuring that every child's encounter with STEAM is filled with wonder, joy, and valuable insights. With a diverse range of engaging activities and cutting-edge HIPROTECH products, we empower students to learn, experiment, and build their way to becoming confident problem solvers and critical thinkers."
                   />
-                  {/* PLACEHOLDER FOR PRE-TINKERING LAB IMAGE */}
                   <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                    <div className="w-40 h-40 bg-gray-300 rounded-full flex items-center justify-center">
-                      <span className="text-gray-600 text-sm text-center">Pre-Tinkering<br />Lab Image</span>
-                    </div>
+                    <Image
+                      src={getImagePath("/Education/d5.jpg")}
+                      alt="Pre-Tinkering Lab"
+                      width={160}
+                      height={160}
+                      className="w-40 h-40 rounded-full object-cover object-center"
+                      loading="lazy"
+                    />
                   </div>
                 </div>
                 <div className="relative">
@@ -202,11 +227,15 @@ export default function Home() {
                     title="ATAL TINKERING LAB"
                     description="HIPROTECH offers comprehensive end-to-end assistance in establishing and running Atal Tinkering Lab in schools, providing students with a stimulating environment for exploring and mastering STEM, tinkering, the Internet of Things, and entrepreneurship."
                   />
-                  {/* PLACEHOLDER FOR ATAL TINKERING LAB IMAGE */}
                   <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                    <div className="w-40 h-40 bg-gray-300 rounded-full flex items-center justify-center">
-                      <span className="text-gray-600 text-sm text-center">Atal Tinkering<br />Lab Image</span>
-                    </div>
+                    <Image
+                      src={getImagePath("/Education/d6.jpg")}
+                      alt="Atal Tinkering Lab"
+                      width={160}
+                      height={160}
+                      className="w-40 h-40 rounded-full object-cover object-center"
+                      loading="lazy"
+                    />
                   </div>
                 </div>
               </div>
@@ -229,10 +258,14 @@ export default function Home() {
                   </button>
                 </div>
                 <div className="bg-gray-100 rounded-xl overflow-hidden">
-                  {/* PLACEHOLDER FOR AI & ROBOTICS LAB IMAGE */}
-                  <div className="w-full h-64 lg:h-96 bg-gray-300 flex items-center justify-center">
-                    <span className="text-gray-500">AI & Robotics Lab Image</span>
-                  </div>
+                  <Image
+                    src={getImagePath("/drone/drone1.jpg")}
+                    alt="AI & Robotics Lab"
+                    width={800}
+                    height={384}
+                    className="w-full h-64 lg:h-96 object-cover object-center"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>
@@ -255,9 +288,14 @@ export default function Home() {
 
               {/* PLACEHOLDER FOR IMPACT IMAGE */}
               <div className="mt-16 bg-gray-100 rounded-xl overflow-hidden">
-                <div className="w-full h-64 bg-gray-300 flex items-center justify-center">
-                  <span className="text-gray-500">Impact/Results Image</span>
-                </div>
+                <Image
+                  src={getImagePath("/drone/impact2.jpg")}
+                  alt="Impact/Results"
+                  width={1200}
+                  height={256}
+                  className="w-full h-64 object-cover object-center"
+                  loading="lazy"
+                />
               </div>
             </div>
           </section>
@@ -274,9 +312,14 @@ export default function Home() {
 
               {/* PLACEHOLDER FOR ECOSYSTEM IMAGE */}
               <div className="mb-8 bg-white bg-opacity-20 rounded-xl overflow-hidden max-w-3xl mx-auto">
-                <div className="w-full h-48 bg-gray-300 flex items-center justify-center">
-                  <span className="text-gray-600">Ecosystem/Product Image</span>
-                </div>
+                <Image
+                  src={getImagePath("/Education/d7.jpg")}
+                  alt="Ecosystem/Product"
+                  width={900}
+                  height={192}
+                  className="w-full h-48 object-cover object-center"
+                  loading="lazy"
+                />
               </div>
 
               <button className="bg-white text-blue-700 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-colors">
@@ -336,7 +379,7 @@ export default function Home() {
                     <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
-                    <a href="tel:+1234567890" className="hover:text-blue-400 transition-colors">+91 8777687605</a>
+                    <a href="tel:+91 8777687605" className="hover:text-blue-400 transition-colors">+91 8777687605</a>
                   </p>
                   <p className="flex items-start">
                     <svg className="w-5 h-5 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -346,18 +389,6 @@ export default function Home() {
                     <span>Biscomaun Bhawan<br />9th floor<br />Gandhi Maidan<br />Patna, Bihar 800001<br />India</span>
                   </p>
                 </address>
-              </div>
-
-              <div className="footer-section">
-                <h3 className="text-xl font-semibold mb-4 border-b border-blue-600 pb-2 inline-block">Quick Links</h3>
-                <ul className="space-y-2">
-                  <li><a href="#" className="hover:text-blue-400 transition-colors">Home</a></li>
-                  <li><a href="#" className="hover:text-blue-400 transition-colors">Services</a></li>
-                  <li><a href="#" className="hover:text-blue-400 transition-colors">About Us</a></li>
-                  <li><a href="#" className="hover:text-blue-400 transition-colors">Case Studies</a></li>
-                  <li><a href="#" className="hover:text-blue-400 transition-colors">Careers</a></li>
-                  <li><a href="#" className="hover:text-blue-400 transition-colors">Contact</a></li>
-                </ul>
               </div>
 
               <div className="footer-section">

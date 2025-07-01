@@ -5,6 +5,7 @@ import { signup, verifyOtp, clearError, clearStatus } from "../redux/slices/auth
 import { useToast } from "../components/Toast";
 import Link from "next/link";
 import Image from "next/image";
+import { getImagePath } from "@/app/utils/getImagePath";
 
 const initialForm = {
   username: "",
@@ -99,7 +100,7 @@ export default function SignupPage() {
             {/* Left side - Image */}
             <div className="lg:w-1/2 bg-gradient-to-br from-blue-600 to-blue-800 p-0 hidden lg:flex flex-col justify-center items-center relative min-h-[32rem]">
               <Image
-                src="/RobotSign.jpg"
+                src={getImagePath("/RobotSign.jpg")}
                 alt="Robotics Illustration"
                 fill
                 className="object-cover absolute inset-0 w-full h-full z-0"

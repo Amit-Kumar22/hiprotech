@@ -2,32 +2,33 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import { getImagePath } from '@/app/utils/getImagePath';
 
 const roboticsImages = [
   {
     id: 1,
-    src: '/Education/d6.jpg',
+    src: getImagePath('/Education/d6.jpg'),
     alt: 'Industrial robotic arm in factory',
     title: 'Industrial Automation',
     description: 'Revolutionizing manufacturing with precision robotics'
   },
   {
     id: 2,
-    src: '/Environment/3.png',
+    src: getImagePath('/Environment/3.png'),
     alt: 'Humanoid robot interacting with humans',
     title: 'Human-Robot Interaction',
     description: 'The future of collaborative robotics in daily life'
   },
   {
     id: 3,
-    src: '/Health/3.png',
+    src: getImagePath('/Health/3.png'),
     alt: 'Medical robot performing surgery',
     title: 'Medical Robotics',
     description: 'Enhancing precision in surgical procedures'
   },
   {
     id: 4,
-    src: '/Agriculture/3.png',
+    src: getImagePath('/Agriculture/3.png'),
     alt: 'Autonomous mobile robot in warehouse',
     title: 'Logistics Automation',
     description: 'Optimizing supply chains with mobile robotics'
@@ -39,7 +40,7 @@ const blogPosts = [
     id: 1,
     title: 'The Future of Collaborative Robotics',
     excerpt: 'Exploring how cobots are transforming small and medium enterprises with safe human-robot interaction.',
-    image: '/drone/collab.jpg',
+    image: getImagePath('/drone/collab.jpg'),
     date: 'May 15, 2023',
     readTime: '5 min read',
     link: 'https://www.automate.org/robotics/cobots/future-of-collaborative-robots'
@@ -48,7 +49,7 @@ const blogPosts = [
     id: 2,
     title: 'AI Integration in Industrial Robots',
     excerpt: 'How machine learning algorithms are enabling predictive maintenance and quality control in robotic systems.',
-    image: '/drone/blog2.webp',
+    image: getImagePath('/drone/blog2.webp'),
     date: 'April 28, 2023',
     readTime: '7 min read',
     link: 'https://www.controleng.com/industrial-robots-powered-by-ai-improve-manufacturing/'
@@ -57,7 +58,7 @@ const blogPosts = [
     id: 3,
     title: 'Robotics in Precision Agriculture',
     excerpt: 'Automated solutions for planting, monitoring, and harvesting with millimeter accuracy.',
-    image: '/drone/blog3.webp',
+    image: getImagePath('/drone/blog3.webp'),
     date: 'March 10, 2023',
     readTime: '6 min read',
     link: 'https://www.azorobotics.com/Article.aspx?ArticleID=113'
@@ -66,7 +67,7 @@ const blogPosts = [
     id: 4,
     title: 'The Ethics of Autonomous Systems',
     excerpt: 'Examining the moral implications of decision-making algorithms in robotics.',
-    image: '/drone/blog4.avif',
+    image: getImagePath('/drone/blog4.avif'),
     date: 'February 22, 2023',
     readTime: '8 min read',
     link: 'https://www.studysmarter.co.uk/explanations/engineering/artificial-intelligence-engineering/autonomous-systems-ethics/'
@@ -125,12 +126,13 @@ export default function Page() {
               {roboticsImages.map((image, index) => (
                 <div key={image.id} className="w-full flex-shrink-0 relative">
                   <div className="absolute inset-0 bg-black opacity-40"></div>
-                  <Image 
-                    src={image.src} 
+                  <Image
+                    src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-cover"
-                    width={800}
-                    height={600}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    sizes="100vw"
+                    priority={index === 0}
                   />
                   <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 text-white">
                     <h1 className="text-3xl md:text-5xl font-bold mb-2">{image.title}</h1>
@@ -232,21 +234,12 @@ export default function Page() {
         {/* Footer */}
         <footer className="bg-gray-900 text-white py-12">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-30">
               <div className="md:col-span-2">
                 <h3 className="text-xl font-bold mb-4">Robotics Insights</h3>
                 <p className="text-gray-400">
                   Providing cutting-edge analysis and perspectives on robotics technology since 2015.
                 </p>
-              </div>
-              <div>
-                <h4 className="font-semibold mb-4">Quick Links</h4>
-                <ul className="space-y-2">
-                  <li><a href="#" className="text-gray-400 hover:text-white transition">Home</a></li>
-                  <li><a href="#" className="text-gray-400 hover:text-white transition">Blog</a></li>
-                  <li><a href="#" className="text-gray-400 hover:text-white transition">Research</a></li>
-                  <li><a href="#" className="text-gray-400 hover:text-white transition">Case Studies</a></li>
-                </ul>
               </div>
               <div>
                 <h4 className="font-semibold mb-4">Connect</h4>

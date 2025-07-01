@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { getImagePath } from "@/app/utils/getImagePath";
 
 export default function EducationImpact() {
     return (
@@ -21,7 +22,7 @@ export default function EducationImpact() {
                         </div>
                         <div className="md:w-1/2">
                             <Image
-                                src="/Military/1.png"
+                                src={getImagePath("/Military/1.png")}
                                 alt="Students engaged in technology learning"
                                 width={600}
                                 height={400}
@@ -64,7 +65,7 @@ export default function EducationImpact() {
                         <div className="flex flex-col md:flex-row gap-12 items-center">
                             <div className="md:w-1/2">
                                 <Image
-                                    src="/Military/6.png"
+                                    src={getImagePath("/Military/6.png")}
                                     alt="Government education partnership"
                                     width={550}
                                     height={400}

@@ -3,6 +3,7 @@
 "use client";
 import React, { useEffect, useState, useMemo } from 'react';
 import Image from 'next/image';
+import { getImagePath } from '@/app/utils/getImagePath';
 
 export default function Page() {
   const [text, setText] = useState('');
@@ -43,7 +44,7 @@ export default function Page() {
   {/* Background Image with Overlay */}
   <div className="absolute inset-0 z-0">
     <Image
-      src="/Military/4.png"
+      src={getImagePath("/Military/4.png")}
       alt="Robotics and AI background"
       layout="fill"
       objectFit="cover"
