@@ -40,18 +40,18 @@ export default function Page() {
   return (
     <div>
       <Head>
-        <title>Careers at Hyprotech | Robotics, Drones, and AI Jobs</title>
-        <meta name="description" content="Explore career opportunities at Hyprotech. Join our team to work on robotics, drones, and AI solutions for education and industry." />
-        <meta name="keywords" content="Hyprotech Careers, Robotics Jobs, Drones Jobs, AI Jobs, STEM Careers, Edtech Jobs" />
-        <link rel="canonical" href="https://hyprotech.in/pages/career" />
-        <meta property="og:title" content="Careers at Hyprotech | Robotics, Drones, and AI Jobs" />
-        <meta property="og:description" content="Explore career opportunities at Hyprotech. Join our team to work on robotics, drones, and AI solutions for education and industry." />
-        <meta property="og:url" content="https://hyprotech.in/pages/career" />
+        <title>Careers at Hiprotech | Robotics, Drones, and AI Jobs</title>
+        <meta name="description" content="Explore career opportunities at Hiprotech. Join our team to work on robotics, drones, and AI solutions for education and industry." />
+        <meta name="keywords" content="Hiprotech Careers, Robotics Jobs, Drones Jobs, AI Jobs, STEM Careers, Edtech Jobs" />
+        <link rel="canonical" href="https://hiprotech.in/pages/career" />
+        <meta property="og:title" content="Careers at Hiprotech | Robotics, Drones, and AI Jobs" />
+        <meta property="og:description" content="Explore career opportunities at Hiprotech. Join our team to work on robotics, drones, and AI solutions for education and industry." />
+        <meta property="og:url" content="https://hiprotech.in/pages/career" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/RobotLogin.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Careers at Hyprotech | Robotics, Drones, and AI Jobs" />
-        <meta name="twitter:description" content="Explore career opportunities at Hyprotech. Join our team to work on robotics, drones, and AI solutions for education and industry." />
+        <meta name="twitter:title" content="Careers at Hiprotech | Robotics, Drones, and AI Jobs" />
+        <meta name="twitter:description" content="Explore career opportunities at Hiprotech. Join our team to work on robotics, drones, and AI solutions for education and industry." />
         <meta name="twitter:image" content="/RobotLogin.jpg" />
       </Head>
       <div className="main-container">
@@ -116,16 +116,16 @@ export default function Page() {
               <div className="bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 p-8 rounded-2xl shadow-xl border border-gray-300 flex flex-col items-center hover:shadow-2xl transition-shadow duration-300">
                 <svg className="w-10 h-10 text-gray-500 mb-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2m4-4h0a4 4 0 0 1 4 4v4a4 4 0 0 1-4 4h0a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4z" /></svg>
                 <p className="text-gray-800 italic mb-4 text-lg">
-                  &quot;Working at Hyprotech has been incredibly rewarding. I&apos;ve had the opportunity to contribute to impactful projects and grow my skills alongside a talented team.&quot;
+                  &quot;Working at Hiprotech has been incredibly rewarding. I&apos;ve had the opportunity to contribute to impactful projects and grow my skills alongside a talented team.&quot;
                 </p>
-                <p className="font-semibold text-gray-900">- Rohan Sharma, Software Engineer</p>
+                <p className="font-semibold text-gray-900">- Manish kumar, Software Engineer</p>
               </div>
               <div className="bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 p-8 rounded-2xl shadow-xl border border-gray-300 flex flex-col items-center hover:shadow-2xl transition-shadow duration-300">
                 <svg className="w-10 h-10 text-gray-500 mb-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2h2m4-4h0a4 4 0 0 1 4 4v4a4 4 0 0 1-4 4h0a4 4 0 0 1-4-4V8a4 4 0 0 1 4-4z" /></svg>
                 <p className="text-gray-800 italic mb-4 text-lg">
-                  &quot;The supportive and collaborative culture at Hyprotech is what sets it apart. We&apos;re encouraged to share ideas and learn from each other, which makes coming to work each day a pleasure.&quot;
+                  &quot;The supportive and collaborative culture at Hiprotech is what sets it apart. We&apos;re encouraged to share ideas and learn from each other, which makes coming to work each day a pleasure.&quot;
                 </p>
-                <p className="font-semibold text-gray-900">- Priya Patel, Marketing Manager</p>
+                <p className="font-semibold text-gray-900">- Ajit Mishra, Marketing Manager</p>
               </div>
             </div>
           </div>

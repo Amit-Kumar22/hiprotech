@@ -103,17 +103,17 @@ export default function Page() {
   return (
     <div>
       <Head>
-        <title>Hyprotech Blog | Robotics, Drones, and AI Insights</title>
+        <title>Hiprotech Blog | Robotics, Drones, and AI Insights</title>
         <meta name="description" content="Read the latest articles and insights on robotics, drones, AI, and STEM education from Hyprotech's experts." />
-        <meta name="keywords" content="Hyprotech Blog, Robotics, Drones, AI, STEM, Education, Insights, Articles" />
-        <link rel="canonical" href="https://hyprotech.in/pages/blog" />
-        <meta property="og:title" content="Hyprotech Blog | Robotics, Drones, and AI Insights" />
+        <meta name="keywords" content="Hiprotech Blog, Robotics, Drones, AI, STEM, Education, Insights, Articles" />
+        <link rel="canonical" href="https://hiprotech.in/pages/blog" />
+        <meta property="og:title" content="Hiprotech Blog | Robotics, Drones, and AI Insights" />
         <meta property="og:description" content="Read the latest articles and insights on robotics, drones, AI, and STEM education from Hyprotech's experts." />
-        <meta property="og:url" content="https://hyprotech.in/pages/blog" />
+        <meta property="og:url" content="https://hiprotech.in/pages/blog" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/RobotLogin.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Hyprotech Blog | Robotics, Drones, and AI Insights" />
+        <meta name="twitter:title" content="Hiprotech Blog | Robotics, Drones, and AI Insights" />
         <meta name="twitter:description" content="Read the latest articles and insights on robotics, drones, AI, and STEM education from Hyprotech's experts." />
         <meta name="twitter:image" content="/RobotLogin.jpg" />
       </Head>

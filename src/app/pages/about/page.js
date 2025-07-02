@@ -21,18 +21,18 @@ function AboutUs() {
   return (
     <div>
       <Head>
-        <title>About Hyprotech | Robotics, Drones, and AI Education</title>
-        <meta name="description" content="Learn about Hyprotech's mission, vision, and expertise in robotics, drones, and AI education for K-12 schools in India." />
-        <meta name="keywords" content="About Hyprotech, Robotics Education, AI, Drones, STEM, India, K-12, Edtech" />
-        <link rel="canonical" href="https://hyprotech.in/pages/about" />
-        <meta property="og:title" content="About Hyprotech | Robotics, Drones, and AI Education" />
+        <title>About Hiprotech | Robotics, Drones, and AI Education</title>
+        <meta name="description" content="Learn about Hiprotech's mission, vision, and expertise in robotics, drones, and AI education for K-12 schools in India." />
+        <meta name="keywords" content="About Hiprotech, Robotics Education, AI, Drones, STEM, India, K-12, Edtech" />
+        <link rel="canonical" href="https://hiprotech.in/pages/about" />
+        <meta property="og:title" content="About Hiprotech | Robotics, Drones, and AI Education" />
         <meta property="og:description" content="Learn about Hyprotech's mission, vision, and expertise in robotics, drones, and AI education for K-12 schools in India." />
-        <meta property="og:url" content="https://hyprotech.in/pages/about" />
+        <meta property="og:url" content="https://hiprotech.in/pages/about" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/RobotLogin.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Hyprotech | Robotics, Drones, and AI Education" />
-        <meta name="twitter:description" content="Learn about Hyprotech's mission, vision, and expertise in robotics, drones, and AI education for K-12 schools in India." />
+        <meta name="twitter:title" content="About Hiprotech | Robotics, Drones, and AI Education" />
+        <meta name="twitter:description" content="Learn about Hiprotech's mission, vision, and expertise in robotics, drones, and AI education for K-12 schools in India." />
         <meta name="twitter:image" content="/RobotLogin.jpg" />
       </Head>
       <div className="main-container min-h-screen bg-gray-50">
@@ -148,7 +148,7 @@ function AboutUs() {
                 </span>
                 <h3 className="text-3xl font-bold mb-4">Featured In</h3>
                 <p className="text-xl max-w-3xl mx-auto">
-                  Hyprotech has been featured in leading media outlets for its pioneering work in robotics and AI education.
+                  Hiprotech has been featured in leading media outlets for its pioneering work in robotics and AI education.
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -173,7 +173,7 @@ function AboutUs() {
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">Join the Future of Education</h3>
             <p className="text-lg mb-8 max-w-2xl mx-auto">
-              Partner with Hyprotech to bring world-class robotics and AI education to your school or organization.
+              Partner with Hiprotech to bring world-class robotics and AI education to your school or organization.
             </p>
             <a href="/contact" className="inline-block bg-gradient-to-r from-black via-gray-800 to-gray-600 text-white px-8 py-3 rounded-md font-semibold shadow hover:from-gray-900 hover:to-gray-700 transition">
               Contact Us
@@ -181,13 +181,15 @@ function AboutUs() {
           </div>
         </section>
       </div>
+      
       {/* Footer Section */}
       <footer className="bg-gradient-to-r from-gray-800 via-gray-700 to-gray-600 text-gray-100 py-8 px-4 mt-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="text-lg font-semibold tracking-wide">© {new Date().getFullYear()} Hyprotech Technologies. All rights reserved.</div>
+          <div className="text-lg font-semibold tracking-wide">© {new Date().getFullYear()} Hiprotech Technologies. All rights reserved.</div>
         </div>
       </footer>
     </div>
+    
   );
 }
 
