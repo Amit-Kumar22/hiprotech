@@ -1,7 +1,7 @@
 
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-// import { BASE_URL } from '@/app/config';
+import { BASE_URL } from '@/app/config';
 import { saveAuthToLocalStorage, clearAuthFromLocalStorage } from '@/app/utils/auth';
 
 // Thunk to verify OTP and complete signup
@@ -9,7 +9,7 @@ export const verifyOtp = createAsyncThunk(
   'auth/verifyOtp',
   async ({ email, otp, userData }, { rejectWithValue }) => {
     try {
-      const response = await axios.post(`/api/auth/verify-otp`, { email, otp, userData });
+      const response = await axios.post(`${BASE_URL}/api/auth/verify-otp`, { email, otp, userData });
       if (typeof window !== 'undefined' && window.toast) {
         window.toast(response.data.message || 'Signup complete!', 'success');
       }
@@ -29,7 +29,7 @@ export const getUserDetail = createAsyncThunk(
   'auth/getUserDetail',
   async (token, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`/api/auth/getuserdetail`, {
+      const response = await axios.get(`${BASE_URL}/api/auth/getuserdetail`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -48,7 +48,7 @@ export const sendOtp = createAsyncThunk(
     try {
       // formData should include all required fields except otp
       console.log('Sending OTP with data:', formData);
-      const response = await axios.post(`/api/auth/send-otp`, formData);
+      const response = await axios.post(`${BASE_URL}/api/auth/send-otp`, formData);
       console.log('Send OTP response:', response.data);
       return response.data;
     } catch (error) {
@@ -63,7 +63,7 @@ export const signup = createAsyncThunk(
   async (userData, { rejectWithValue }) => {
     try {
       console.log('Signing up with data:', userData);
-      const response = await axios.post(`/api/auth/signup`, userData);
+      const response = await axios.post(`${BASE_URL}/api/auth/signup`, userData);
       console.log('Signup response:', response.data);
       if (typeof window !== 'undefined' && window.toast) {
         window.toast(response.data.message || 'Signup successful!', 'success');
@@ -85,7 +85,7 @@ export const login = createAsyncThunk(
   async (credentials, { rejectWithValue }) => {
     try {
       console.log('Logging in with credentials:', credentials);
-      const response = await axios.post(`/api/auth/login`, credentials);
+      const response = await axios.post(`${BASE_URL}/api/auth/login`, credentials);
       console.log('Login response:', response.data);
       if (typeof window !== 'undefined' && window.toast) {
         window.toast(response.data.message || 'Login successful!', 'success');
@@ -108,7 +108,7 @@ export const forgotPassword = createAsyncThunk(
   async (email, { rejectWithValue }) => {
     try {
       console.log('Forgot password for:', email);
-      const response = await axios.post(`/api/auth/forgot-password`, { email });
+      const response = await axios.post(`${BASE_URL}/api/auth/forgot-password`, { email });
       console.log('Forgot password response:', response.data);
       if (typeof window !== 'undefined' && window.toast) {
         window.toast(response.data.message || 'Password reset email sent!', 'success');
@@ -131,7 +131,7 @@ export const resetPassword = createAsyncThunk(
   async (data, { rejectWithValue }) => {
     try {
       console.log('Resetting password with data:', data);
-      const response = await axios.post(`/api/auth/reset-password`, data);
+      const response = await axios.post(`${BASE_URL}/api/auth/reset-password`, data);
       console.log('Reset password response:', response.data);
       if (typeof window !== 'undefined' && window.toast) {
         window.toast(response.data.message || 'Password reset successful!', 'success');
