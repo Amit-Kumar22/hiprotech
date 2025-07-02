@@ -26,7 +26,7 @@ function AboutUs() {
         <meta name="keywords" content="About Hiprotech, Robotics Education, AI, Drones, STEM, India, K-12, Edtech" />
         <link rel="canonical" href="https://hiprotech.in/pages/about" />
         <meta property="og:title" content="About Hiprotech | Robotics, Drones, and AI Education" />
-        <meta property="og:description" content="Learn about Hyprotech's mission, vision, and expertise in robotics, drones, and AI education for K-12 schools in India." />
+        <meta property="og:description" content="Learn about Hiprotech's mission, vision, and expertise in robotics, drones, and AI education for K-12 schools in India." />
         <meta property="og:url" content="https://hiprotech.in/pages/about" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/RobotLogin.jpg" />
