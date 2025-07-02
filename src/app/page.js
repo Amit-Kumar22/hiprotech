@@ -135,10 +135,6 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="bg-gray-100 rounded-lg overflow-hidden">
                   {/* PLACEHOLDER FOR CODING IMAGE */}
-                  <div className="w-full h-48 bg-gray-300 flex items-center justify-center">
-                    <span className="text-gray-500">Coding Image</span>
-                    
-                  </div>
                   <Image
                     src={getImagePath("/Education/d1.jpg")}
                     alt="Coding Platform"
@@ -199,56 +195,56 @@ export default function Home() {
           </section>
 
           {/* Offerings Section */}
-  <section className="bg-gray-800 text-white py-16 px-4 sm:px-6 lg:px-8">
-  <div className="max-w-7xl mx-auto">
-    <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-      OFFERINGS TO MAKE YOUR SCHOOL READY FOR 21ST CENTURY
-    </h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      
-      {/* CARD 1 */}
-      <div className="relative bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm border border-white border-opacity-20 text-black overflow-hidden">
-        <div className="pb-24"> {/* space to prevent image overlap */}
-          <OfferingCard
-            title="PRE-TINKERING LAB"
-            description="Our unique approach in our Pre-Tinkering Lab seamlessly blends education with excitement, ensuring that every child's encounter with STEAM is filled with wonder, joy, and valuable insights. With a diverse range of engaging activities and cutting-edge HIPROTECH products, we empower students to learn, experiment, and build their way to becoming confident problem solvers and critical thinkers."
-          />
-        </div>
-        <div className="absolute bottom-6 right-6 w-28 h-28 rounded-full overflow-hidden shadow-lg">
-          <Image
-            src={getImagePath("/Education/d5.jpg")}
-            alt="Pre-Tinkering Lab"
-            width={112}
-            height={112}
-            className="w-full h-full object-cover object-center"
-            loading="lazy"
-          />
-        </div>
-      </div>
+          <section className="bg-gray-800 text-white py-16 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+                OFFERINGS TO MAKE YOUR SCHOOL READY FOR 21ST CENTURY
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-      {/* CARD 2 */}
-      <div className="relative bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm border border-white border-opacity-20 text-black overflow-hidden">
-        <div className="pb-24">
-          <OfferingCard
-            title="ATAL TINKERING LAB"
-            description="HIPROTECH offers comprehensive end-to-end assistance in establishing and running Atal Tinkering Lab in schools, providing students with a stimulating environment for exploring and mastering STEM, tinkering, the Internet of Things, and entrepreneurship."
-          />
-        </div>
-        <div className="absolute bottom-6 right-6 w-28 h-28 rounded-full overflow-hidden shadow-lg">
-          <Image
-            src={getImagePath("/Education/d6.jpg")}
-            alt="Atal Tinkering Lab"
-            width={112}
-            height={112}
-            className="w-full h-full object-cover object-center"
-            loading="lazy"
-          />
-        </div>
-      </div>
+                {/* CARD 1 */}
+                <div className="relative bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm border border-white border-opacity-20 text-black overflow-hidden">
+                  <div className="pb-24"> {/* space to prevent image overlap */}
+                    <OfferingCard
+                      title="PRE-TINKERING LAB"
+                      description="Our unique approach in our Pre-Tinkering Lab seamlessly blends education with excitement, ensuring that every child's encounter with STEAM is filled with wonder, joy, and valuable insights. With a diverse range of engaging activities and cutting-edge HIPROTECH products, we empower students to learn, experiment, and build their way to becoming confident problem solvers and critical thinkers."
+                    />
+                  </div>
+                  <div className="absolute bottom-6 right-6 w-28 h-28 rounded-full overflow-hidden shadow-lg">
+                    <Image
+                      src={getImagePath("/Education/d5.jpg")}
+                      alt="Pre-Tinkering Lab"
+                      width={112}
+                      height={112}
+                      className="w-full h-full object-cover object-center"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
 
-    </div>
-  </div>
-</section>
+                {/* CARD 2 */}
+                <div className="relative bg-white bg-opacity-10 p-8 rounded-xl backdrop-blur-sm border border-white border-opacity-20 text-black overflow-hidden">
+                  <div className="pb-24">
+                    <OfferingCard
+                      title="ATAL TINKERING LAB"
+                      description="HIPROTECH offers comprehensive end-to-end assistance in establishing and running Atal Tinkering Lab in schools, providing students with a stimulating environment for exploring and mastering STEM, tinkering, the Internet of Things, and entrepreneurship."
+                    />
+                  </div>
+                  <div className="absolute bottom-6 right-6 w-28 h-28 rounded-full overflow-hidden shadow-lg">
+                    <Image
+                      src={getImagePath("/Education/d6.jpg")}
+                      alt="Atal Tinkering Lab"
+                      width={112}
+                      height={112}
+                      className="w-full h-full object-cover object-center"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
 
           {/* AI & Robotics Lab Section */}
           <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
@@ -417,7 +413,7 @@ export default function Home() {
                       <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
                     </svg>
                   </a>
-                 
+
                 </div>
                 <h4 className="text-lg font-semibold mb-2">Newsletter</h4>
                 <form className="flex flex-col sm:flex-row gap-2">

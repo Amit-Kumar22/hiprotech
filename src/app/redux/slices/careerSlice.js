@@ -1,13 +1,13 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { BASE_URL } from '@/app/config';
+// import { BASE_URL } from '@/app/config';
 
 // Thunk to fetch all jobs
 export const fetchAllJobs = createAsyncThunk(
   'career/fetchAllJobs',
   async (params, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`${BASE_URL}/api/jobs/getalljobs`, { params });
+      const response = await axios.get(`/api/jobs`, { params });
       return response.data;
     } catch (error) {
       const msg = error.response?.data?.message || error.response?.data || error.message;
@@ -21,7 +21,7 @@ export const applyJob = createAsyncThunk(
   'career/applyJob',
   async (formData, { rejectWithValue }) => {
     try {
-      const response = await axios.post(`${BASE_URL}/api/job-applications`, formData);
+      const response = await axios.post(`/api/job-applications`, formData);
       if (typeof window !== 'undefined' && window.toast) {
         window.toast(response.data.message || 'Application submitted!', 'success');
       }
