@@ -287,10 +287,10 @@ export default function Page() {
                 <div className="bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 p-6 rounded-2xl border border-gray-300 shadow-md flex flex-col items-start hover:shadow-xl transition-shadow duration-300">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Contact Our HR Team</h3>
                   <p className="text-gray-700 mb-4">
-                    Email: <a href="mailto:careers@hyprotech.in" className="text-blue-600 hover:underline">careers@hyprotech.in</a>
+                    Email: <a href="mailto:info@hiprotech.org" className="text-blue-600 hover:underline">info@hiprotech.org</a>
                   </p>
                   <p className="text-gray-700">
-                    Phone: <a href="tel:+911234567890" className="text-blue-600 hover:underline">+91 8777687605</a>
+                    Phone: <a href="tel:+91 8777687605" className="text-blue-600 hover:underline">+91 8777687605</a>
                   </p>
                 </div>
               </div>

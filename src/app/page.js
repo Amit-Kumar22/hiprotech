@@ -297,7 +297,7 @@ export default function Home() {
               {/* PLACEHOLDER FOR IMPACT IMAGE */}
               <div className="mt-16 bg-gray-100 rounded-xl overflow-hidden">
                 <Image
-                  src={getImagePath("/drone/impact2.jpg")}
+                  src={getImagePath("/drone/school0.jpg")}
                   alt="Impact/Results"
                   width={1200}
                   height={256}
